@@ -7,6 +7,9 @@ color: black;
 	text-align: center;
 
 }
+ul{
+padding-bottom: 10px;
+}
 
  body{
 	 display: block;
