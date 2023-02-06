@@ -31,85 +31,114 @@ padding: 10px;
 }
 *{ margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
-.nav	{display: flex;
+.nav	{
+    display: flex;
     justify-content: flex-end;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     background: var(--main-red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-    z-index: 10;}
+    z-index: 2;}
  .nav-list {
     display: flex;
-	
- 
     margin-right: 2rem;
-	padding: 2rem;
-}   
- li{ display: inline-block;
- 
+	  padding: 2rem;
+} 
+
+nav ul li{ display: inline-block;
 margin-right: 6rem;
+font-size: 30px;
+line-height: 1.8rem;
+font-weight: 500;
+color: black;
 }
-ul {
-list-style: none;}
-a {  color: var(--main-white);
-text-decoration: none;}
+
+
+nav ul {
+          list-style: none;
+        }
+        nav ul li a {  color: var(--main-white);
+     text-decoration: none;
+    
+}
+nav ul div li a:hover:{
+  color: black;
+  padding: 20px;
+ 
+}
  #welcome-section{
-   display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-	    text-align: center;
+	  text-align: center;
     width: 100%;
     height: 100vh;
-	 padding: 10rem 2rem;
+	  padding: 10rem 2rem;
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
  }
+   #services-section{
+    background-color: #000;
+    min-width: 100%;
+    min-height: 100vh;
+    border: 5px solid #ffffff;
+    padding: 16px;
+   }
+   #services ul{
+    list-style-type: none;
+   }
+   #services ul li{
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    
+   }
+ #project-section{
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #000;
+  padding: 16px;
+ }
+#left-container, #right-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
  
+}
 
- 
- .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  height: 100vh;
-  max-width: 1280px;
- 
- 
- 
-}
-.project {
-  background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  width:45vw;
-  height:42vh;
-}
+
 .code {
-  color: var(--main-gray);
+  color: red var(--main-gray);
   transition: color 0.3s ease-out;
 }
 .project:hover .code {
   color: #ff7f50;
 }
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
+.img-responsive {
+  height: calc(100% - 40rem);
+   max-width: calc(100% - 20rem);
+   object-fit: cover;
+   border-radius: 50px;
+   box-shadow: 2px 2px 2px
 }
 .btn {width:13vw;
-  display: inline-block;
-  padding: 1rem 2rem;
-border-radius: 9px;
-margin:2rem 40vw;
-text-align:center;}
+   display: inline-block;
+   padding: 1rem 2rem;
+   border-radius: 9px;
+   margin:2rem 40vw;
+   text-align:center;}
 .btn-show-all {
   font-size: 2rem;
   background: var(--main-gray);
@@ -128,38 +157,67 @@ text-align:center;}
   transition: transform 0.3s ease-out;
 }
 /* Contact section */
-  #contact{ 
-   display: flex;
+  #contact-section{ 
+
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    background: var(--main-white)
+     
+  }
+  .contact-links{
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: bottom;
     text-align: center;
-    width: 100%;
-    height: 80vh;
-    padding: 0 2rem;
-  background: var(--main-gray);}
-  footer{
-  font-weight: 300;
+   
+  }
+  #contact-section p  {
+    font-size: 30px;
+    text-align: center;
+  }
+    .contact-links a{
+      font-size: 30px;
+    
+    }
+footer{
+    font-weight: 300;
     display: flex;
+    flex: row wrap;
     justify-content: space-evenly;
     padding: 2rem;
     background: var(--main-gray);
-	color: white;
-    border-top: 4px solid var(--main-red);}
+	  color: white;
+    border-top: 4px solid var(--main-red);
+    height: 30vh;
+  }
 
-h1, h2, p{
+h1, h2 {
 color: white;
 font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  text-align: center;
+ 
 }
-
+h2 {
+    font-size: 40%;
+}
+P{
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  margin-top: 0px;
+  font-weight: 700;
+}
  @media (max-width: 800px){
                 	     .nav	{display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
                            justify-content: center;}
   }
  @media (max-width: 576px){
                 	     .nav	{display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
                            justify-content: center;}
   }
 
